@@ -213,6 +213,14 @@ h2 {
   background-color: hsl(var(--primary-600) / 0.9);
 }
 
+[for="email"] + span:hover::before {
+  content: "Please enter your e-mail address.";
+}
+
+[for="password"] + span:hover::before {
+  content: "Minimum 12 characters, at least one capital and one number."
+}
+
 .sign-up-grid {
   gap: 0;
   padding-right: 0;
@@ -274,14 +282,4 @@ h2 {
     z-index: -1;
     background-color: hsl(var(--primary-700));
   }
-}
-
-@media (hover: hover) {
-  [for="email"] + span:hover::before {
-    content: "Please enter your e-mail address.";
-  }
-  
-  [for="password"] + span:hover::before {
-    content: "Minimum 12 characters, at least one capital and one number."
-  }  
 }
