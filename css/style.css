@@ -134,6 +134,10 @@ h2 {
   border: 0;
 }
 
+.rounded-none {
+  border-radius: 0;
+}
+
 .rounded-full {
   border-radius: 100vh;
 }
@@ -184,7 +188,7 @@ h2 {
 }
 
 .label-container {
-  --gap: 0.4rem;
+  --gap: 0.5rem;
 }
 
 .label-container span {
@@ -207,14 +211,6 @@ h2 {
   max-width: 36ch;
   font-size: var(--fs-200);
   background-color: hsl(var(--primary-600) / 0.9);
-}
-
-[for="email"] + span:hover::before {
-  content: "Please enter your e-mail address.";
-}
-
-[for="password"] + span:hover::before {
-  content: "Minimum 12 characters, at least one capital and one number."
 }
 
 .sign-up-grid {
@@ -278,4 +274,14 @@ h2 {
     z-index: -1;
     background-color: hsl(var(--primary-700));
   }
+}
+
+@media (hover: hover) {
+  [for="email"] + span:hover::before {
+    content: "Please enter your e-mail address.";
+  }
+  
+  [for="password"] + span:hover::before {
+    content: "Minimum 12 characters, at least one capital and one number."
+  }  
 }
