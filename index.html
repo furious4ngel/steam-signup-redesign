@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;700;800&display=swap">
+    <link rel="stylesheet" href="css/_reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <title>Steam Signup Redesign</title>
+  </head>
+  <body class="[ flex align-center color-neutral-100 ]">
+    <main class="[ w-full ]">
+      <div class="[ sign-up-grid ][ container grid items-center relative ]">
+        <div class="[ form-panel panel ][ flow ]">
+          <img class="[ logo ]" src="assets/steam-logo.svg" alt="Steam logo">
+          <h1 class="[ fw-800 tracking-wider uppercase ]">Create Your Account</h1>
+          <div class="[ opacity-85 ]">
+            <p>The ultimate entertainment platform.</p>
+            <p>Play, connect, create, and more.</p>
+            <p class="[ fw-800 ]">It's free to join, and easy to use.</p>
+          </div>
+          <form class="[ flow ]" action="/" method="post">
+            <div class="[ input-container ][ flow ]">
+              <div class="[ label-container ][ flex align-center w-max ]">
+                <label for="email">Your e-mail</label>
+                <span class="[ relative rounded-full ]" aria-label="Please enter your e-mail address."></span>
+              </div>
+              <input class="[ w-full bg-primary-600 border-none color-inherit ]" type="email" name="email" id="email">
+            </div>
+            <div class="[ input-container ][ flow ]">
+              <div class="[ label-container ][ flex align-center w-max ]">
+                <label for="password">Password</label>
+                <span class="[ relative rounded-full ]" aria-label="Minimum 12 characters, at least one capital and one number."></span>
+              </div>
+              <input class="[ w-full bg-primary-600 border-none color-inherit ]" aria-describedby="password-hint" type="password" name="password" id="password">
+              <div class="[ visually-hidden ]" id="password-hint">Minimum 12 characters, at least one capital and one number.</div>
+            </div>
+            <div class="[ input-container ][ flow ]">
+              <label for="confirm-password">Re-enter password</label>
+              <input class="[ w-full bg-primary-600 border-none color-inherit ]" type="password" name="confirmPassword" id="confirm-password">
+            </div>
+            <div class="[ fs-300 ]">
+              <input type="checkbox" id="verified" name="isVerified" value="true">
+              <label for="verified">
+                I am 13 years of age or older AND agree to the <a class="[ link ][ color-inherit ]" href="#">terms and services</a>.
+              </label>
+            </div>
+            <img src="assets/recaptcha-dark.png" alt="reCAPTCHA">
+            <div class="[ cluster ][ flex align-center flex-wrap ]">
+              <button type="button" class="[ button ][ fw-800 bg-secondary-200 border-none color-neutral-900 ]">
+                <span class="[ opacity-70 ]">Sign up now</span>
+              </button>
+              <a class="[ link ][ fs-300 color-inherit ]" href="#">I already have an account</a>
+            </div>
+          </form>
+        </div>
+        <div class="[ join-steam-panel panel ][ flow ][ bg-primary-700 ]">
+          <h2 class="[ fw-700 tracking-wider uppercase ]">Why join Steam?</h2>
+          <ul class="[ flow ][ opacity-85 ]" role="list">
+            <li>Buy and download full retail games</li>
+            <li>Join the Steam community</li>
+            <li>Chat with your friends while gaming</li>
+            <li>Play your games on any supported platform</li>
+            <li>Schedule a game, tournament, or LAN party</li>
+            <li>Receive automatic game updates, and more!</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

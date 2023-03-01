@@ -1,0 +1,281 @@
+:root {
+  --neutral-100: 0 0% 100%;
+  --neutral-900: 0 0% 0%;
+  --primary-400: 212 60% 36%;
+  --primary-600: 212 61% 23%;
+  --primary-700: 212 46% 20%;
+  --primary-900: 212 100% 2%;
+  --secondary-200: 126 74% 47%;
+
+  --ff-body: 'Assistant', sans-serif;
+  
+  --fs-200: 0.8em;
+  --fs-300: 0.9em;
+  --fs-400: 1.125em;
+
+  --fw-300: 300;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+
+body {
+  --bg-opacity: 0.9;
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-300);
+  background-image: linear-gradient(
+    hsl(var(--primary-900) / var(--bg-opacity)), 
+    hsl(var(--primary-900) / var(--bg-opacity))),
+    url('/assets/steam-bg.jpg');
+  background-position: center, center;
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+}
+
+[role="list"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* Composition */
+.flow > * + * {
+  margin-top: var(--flow-space, 0.8em);
+}
+
+.cluster {
+  --gap: 0.8em 1.6em;
+}
+
+/* Utilities */
+.visually-hidden {
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  max-width: var(--max-width, 55rem);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.relative {
+  position: relative;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-max {
+  width: max-content;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+
+.fw-800 {
+  font-weight: var(--fw-800);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bg-primary-600 {
+  background-color: hsl(var(--primary-600));
+}
+
+.bg-primary-700 {
+  background-color: hsl(var(--primary-700));
+}
+
+.bg-secondary-200 {
+  background-color: hsl(var(--secondary-200));
+}
+
+.border-none {
+  border: 0;
+}
+
+.rounded-full {
+  border-radius: 100vh;
+}
+
+.color-neutral-100 {
+  color: hsl(var(--neutral-100));
+}
+
+.color-neutral-900 {
+  color: hsl(var(--neutral-900));
+}
+
+.color-inherit {
+  color: inherit;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-85 {
+  opacity: 0.85;
+}
+
+/* Block */
+.logo {
+  max-width: 12rem;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.link:hover {
+  opacity: 0.9;
+}
+
+.input-container {
+  --flow-space: 0.4em;
+}
+
+.input-container input {
+  padding: 0.4em 0.5em;
+}
+
+.label-container {
+  --gap: 0.4rem;
+}
+
+.label-container span {
+  --size: 1rem;
+  height: var(--size);
+  width: var(--size);
+  background-color: hsl(var(--primary-600) / 0.8);
+  background-image: url('/assets/question-mark.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.label-container span::before {
+  padding: 0.4em 0.8em;
+  position: absolute;
+  bottom: calc(var(--size) + 0.25rem);
+  min-width: min-content;
+  width: 50vw;
+  max-width: 36ch;
+  font-size: var(--fs-200);
+  background-color: hsl(var(--primary-600) / 0.9);
+}
+
+[for="email"] + span:hover::before {
+  content: "Please enter your e-mail address.";
+}
+
+[for="password"] + span:hover::before {
+  content: "Minimum 12 characters, at least one capital and one number."
+}
+
+.sign-up-grid {
+  gap: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 36em) {
+  .sign-up-grid {
+    grid-template-columns: 1fr 0.8fr;
+  }
+}
+
+.panel {
+  padding: 2.5rem;
+}
+
+.form-panel {
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--primary-400)) 50%,
+    hsl(var(--primary-600))
+  );
+}
+
+.form-panel .button {
+  padding: 0.4em 1.25em;
+}
+
+@media screen and (min-width: 48em) {
+  .sign-up-grid {
+    --max-grid-columns: 6;
+    --max-grid-rows: 12;
+    grid-template-columns: repeat(calc(var(--max-grid-columns) - 1), 1fr) 0.3fr;
+    grid-template-rows: repeat(var(--max-grid-rows), 1fr);
+  }
+
+  .form-panel {
+    grid-column: calc(var(--max-grid-columns) / 2) / var(--max-grid-columns);
+    grid-row: 1 / -1;
+  }
+
+  .join-steam-panel,
+  .join-steam-panel::after {
+    grid-row: 3 / calc(var(--max-grid-rows) - 1);
+  }
+
+  .join-steam-panel {
+    grid-column: 1 / calc(var(--max-grid-columns) / 2);
+  }
+
+  .join-steam-panel::after {
+    content: '';
+    grid-column: var(--max-grid-columns) / -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: hsl(var(--primary-700));
+  }
+}
