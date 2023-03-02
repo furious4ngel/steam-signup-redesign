@@ -257,9 +257,9 @@ h2 {
 @media screen and (min-width: 48em) {
   .sign-up-grid {
     --max-grid-columns: 6;
-    --max-grid-rows: 12;
+    --max-grid-rows: 3;
     grid-template-columns: repeat(calc(var(--max-grid-columns) - 1), 1fr) 0.3fr;
-    grid-template-rows: repeat(var(--max-grid-rows), 1fr);
+    grid-template-rows: repeat(var(--max-grid-rows), auto);
   }
 
   .form-panel {
@@ -284,7 +284,6 @@ h2 {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
     background-color: hsl(var(--primary-700));
   }
 }
