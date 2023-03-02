@@ -10,7 +10,7 @@
   --ff-body: 'Assistant', sans-serif;
   
   --fs-200: 0.8em;
-  --fs-300: 0.9em;
+  --fs-300: 0.875em;
   --fs-400: 1.125em;
 
   --fw-300: 300;
@@ -210,6 +210,10 @@ h2 {
 }
 
 .label-container span::after {
+  display: none;
+}
+
+.label-container span::after {
   padding: 0.4em 0.8em;
   position: absolute;
   bottom: calc(var(--size) + 0.25rem);
@@ -220,12 +224,16 @@ h2 {
   background-color: hsl(var(--primary-600) / 0.9);
 }
 
-[for="email"] + span:hover::after {
-  content: "Please enter your e-mail address.";
+[for="email"] + span::after {
+  content: attr(aria-label);
 }
 
-[for="password"] + span:hover::after {
-  content: "Minimum 12 characters, at least one capital and one number."
+[for="password"] + span::after {
+  content: attr(aria-label);
+}
+
+.label-container span:hover::after {
+  display: block;
 }
 
 .sign-up-grid {
