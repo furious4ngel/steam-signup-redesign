@@ -193,6 +193,7 @@ h2 {
 
 .input-container input {
   padding: 0.4em 0.5em;
+  background-color: hsl(var(--primary-600) / var(--bg-opacity));
 }
 
 .label-container {
@@ -203,7 +204,7 @@ h2 {
   --size: 1rem;
   height: var(--size);
   width: var(--size);
-  background-color: hsl(var(--primary-600) / 0.8);
+  background-color: hsl(var(--primary-600) / var(--bg-opacity));
 }
 
 .label-container span::before {
