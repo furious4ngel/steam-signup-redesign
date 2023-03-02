@@ -81,6 +81,10 @@ h2 {
   flex-wrap: wrap;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
@@ -100,6 +104,10 @@ h2 {
 
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
 }
 
 .fs-300 {
@@ -196,28 +204,28 @@ h2 {
   height: var(--size);
   width: var(--size);
   background-color: hsl(var(--primary-600) / 0.8);
-  background-image: url('../assets/question-mark.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
 }
 
 .label-container span::before {
+  content: '?';
+}
+
+.label-container span::after {
   padding: 0.4em 0.8em;
   position: absolute;
   bottom: calc(var(--size) + 0.25rem);
+  left: 0;
   min-width: min-content;
   width: 50vw;
   max-width: 36ch;
-  font-size: var(--fs-200);
   background-color: hsl(var(--primary-600) / 0.9);
 }
 
-[for="email"] + span:hover::before {
+[for="email"] + span:hover::after {
   content: "Please enter your e-mail address.";
 }
 
-[for="password"] + span:hover::before {
+[for="password"] + span:hover::after {
   content: "Minimum 12 characters, at least one capital and one number."
 }
 
