@@ -2,7 +2,7 @@
   --neutral-100: 0 0% 100%;
   --neutral-900: 0 0% 0%;
   --primary-400: 212 60% 36%;
-  --primary-600: 212 61% 23%;
+  --primary-600: 212 61% 23% / 0.9;
   --primary-700: 212 46% 20%;
   --primary-900: 212 30% 12%;
   --secondary-200: 126 74% 47%;
@@ -10,7 +10,7 @@
   --ff-body: 'Assistant', sans-serif;
   
   --fs-200: 0.8em;
-  --fs-300: 0.875em;
+  --fs-300: 0.85em;
   --fs-400: 1.125em;
 
   --fw-300: 300;
@@ -19,7 +19,6 @@
 }
 
 body {
-  --bg-opacity: 0.9;
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   font-weight: var(--fw-300);
@@ -191,7 +190,6 @@ h2 {
 
 .input-container input {
   padding: 0.4em 0.5em;
-  background-color: hsl(var(--primary-600) / var(--bg-opacity));
 }
 
 .label-container {
@@ -202,7 +200,6 @@ h2 {
   --size: 1rem;
   height: var(--size);
   width: var(--size);
-  background-color: hsl(var(--primary-600) / var(--bg-opacity));
 }
 
 .label-container span::before {
@@ -221,7 +218,7 @@ h2 {
   min-width: min-content;
   width: 50vw;
   max-width: 36ch;
-  background-color: hsl(var(--primary-600) / 0.9);
+  background-color: inherit;
 }
 
 [for="email"] + span::after {
