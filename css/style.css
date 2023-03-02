@@ -188,7 +188,7 @@ h2 {
   --flow-space: 0.4em;
 }
 
-.input-container input {
+.input-container .text-input {
   padding: 0.4em 0.5em;
 }
 
