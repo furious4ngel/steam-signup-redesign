@@ -215,6 +215,7 @@ h2 {
   min-width: min-content;
   width: 50vw;
   max-width: 36ch;
+  z-index: 1;
   background-color: hsl(var(--primary-600) / 0.9);
 }
 
