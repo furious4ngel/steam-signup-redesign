@@ -95,6 +95,10 @@ h2 {
   width: 100%;
 }
 
+.w-max {
+  width: max-content;
+}
+
 .tracking-wider {
   letter-spacing: 0.05em;
 }
@@ -184,33 +188,21 @@ h2 {
   opacity: 0.9;
 }
 
-.input-container {
+.input-group {
   --flow-space: 0.4em;
 }
 
-.input-container .text-input {
-  padding: 0.4em 0.5em;
-}
-
-.label-container {
+.input-group label {
   --gap: 0.5rem;
 }
 
-.label-container span {
+.input-group span {
   --size: 1rem;
   height: var(--size);
   width: var(--size);
 }
 
-.label-container span::before {
-  content: '?';
-}
-
-.label-container span::after {
-  display: none;
-}
-
-.label-container span::after {
+.input-group span::before {
   padding: 0.4em 0.8em;
   position: absolute;
   bottom: calc(var(--size) + 0.25rem);
@@ -221,16 +213,12 @@ h2 {
   background-color: inherit;
 }
 
-[for="email"] + span::after {
+.input-group span:hover::before {
   content: attr(aria-label);
 }
 
-[for="password"] + span::after {
-  content: attr(aria-label);
-}
-
-.label-container span:hover::after {
-  display: block;
+.input-group input {
+  padding: 0.4em 0.5em;
 }
 
 .sign-up-grid {
