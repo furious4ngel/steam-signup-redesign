@@ -25,7 +25,6 @@ body {
   background-blend-mode: multiply;
   background-image: url('../assets/steam-bg.jpg');
   background-position: center;
-  background-repeat: repeat;
   background-size: cover;
 }
 
